@@ -6,9 +6,9 @@ require('dotenv').config();
 
 const messageHandler = message => {
   console.log(`Received message ${message.id}:`);
-  console.log(`\tData: ${message.data}`);
-  console.log(`\tAttributes: ${message.attributes}`);
-  console.log('Received message:', message.data.toString());
+  console.log(`Data: ${message.data}`);
+  console.log(`Attributes: ${message.attributes}`);
+  console.log('Received message:', JSON.parse(message.data.toString()));
 
   // "Ack" (acknowledge receipt of) the message
   message.ack();
