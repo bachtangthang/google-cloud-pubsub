@@ -30,8 +30,8 @@ async function publishMessage(data) {
   const dataBuffer = Buffer.from(JSON.stringify(data));
   console.log(dataBuffer)
   try {
-    const messageId = await pubsub
-      .topic(process.env.topicName)
+    const pubSubClient = pubsub.topic(process.env.topicName)
+    const messageId = await pubSubClient
       .publishMessage({data: dataBuffer});
     console.log(`Message ${messageId} published with data ${data}`);
   } catch (error) {
@@ -40,4 +40,4 @@ async function publishMessage(data) {
   }
 }
 
-publishMessage(data2);
+publishMessage(data);
