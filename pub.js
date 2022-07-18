@@ -15,6 +15,17 @@ const data = {
   portal_id: 1,
 };
 
+const data2 = {
+  product_name: "thịt chó 2",
+  image_url: "url",
+  landing_page_url: "landing_page_url",
+  category: "thit cho",
+  price: 10000,
+  status: 1,
+  product_id: "1000",
+  portal_id: 1,
+};
+
 async function publishMessage(data) {
   const dataBuffer = Buffer.from(JSON.stringify(data));
   console.log(dataBuffer)
@@ -29,4 +40,4 @@ async function publishMessage(data) {
   }
 }
 
-publishMessage(data);
+publishMessage(data2);

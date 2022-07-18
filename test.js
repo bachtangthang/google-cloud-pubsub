@@ -7,10 +7,4 @@ const data = {
   status: 1,
   product_id: "1000",
   portal_id: 1,
-};
-console.log(data.toString())
-console.log(Buffer(data.toString()))
-
-console.log(Buffer(data.toString()).toString())
-
-console.log(JSON.parse(Buffer(data.toString()).toString()))
+}
